@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>symbolicatecrash解析crash文件 | BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="导出crash文件Xcode —&amp;gt; Window —&amp;gt; Devices and Simulators —&amp;gt;  View Device Logs ，然后选中导出。 找到.app文件和.dsym文件 .app文件：直接解压缩.ipa文件，在Payload文件夹里面取得 .dsym文件：.xcarchive文件显示包内容，在dSYMs文件夹里面取得  找到symbolicatecras">
+<meta property="og:type" content="article">
+<meta property="og:title" content="symbolicatecrash解析crash文件">
+<meta property="og:url" content="https://zhangxiaopei.github.io/2020/05/09/symbolicatecrash解析crash文件/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="导出crash文件Xcode —&amp;gt; Window —&amp;gt; Devices and Simulators —&amp;gt;  View Device Logs ，然后选中导出。 找到.app文件和.dsym文件 .app文件：直接解压缩.ipa文件，在Payload文件夹里面取得 .dsym文件：.xcarchive文件显示包内容，在dSYMs文件夹里面取得  找到symbolicatecras">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/09/symbolicatecrash解析crash文件/1.jpeg">
+<meta property="og:updated_time" content="2020-05-09T12:46:42.598Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="symbolicatecrash解析crash文件">
+<meta name="twitter:description" content="导出crash文件Xcode —&amp;gt; Window —&amp;gt; Devices and Simulators —&amp;gt;  View Device Logs ，然后选中导出。 找到.app文件和.dsym文件 .app文件：直接解压缩.ipa文件，在Payload文件夹里面取得 .dsym文件：.xcarchive文件显示包内容，在dSYMs文件夹里面取得  找到symbolicatecras">
+<meta name="twitter:image" content="https://zhangxiaopei.github.io/2020/05/09/symbolicatecrash解析crash文件/1.jpeg">
+  
+    <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">BLOG</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zhangxiaopei.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-symbolicatecrash解析crash文件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/09/symbolicatecrash解析crash文件/" class="article-date">
+  <time datetime="2020-05-09T12:46:42.598Z" itemprop="datePublished">2020-05-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      symbolicatecrash解析crash文件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="导出crash文件"><a href="#导出crash文件" class="headerlink" title="导出crash文件"></a>导出crash文件</h2><p>Xcode —&gt; Window —&gt; Devices and Simulators —&gt;  View Device Logs ，然后选中导出。<br><img src="//zhangxiaopei.github.io/2020/05/09/symbolicatecrash解析crash文件/1.jpeg" alt></p>
+<h2 id="找到-app文件和-dsym文件"><a href="#找到-app文件和-dsym文件" class="headerlink" title="找到.app文件和.dsym文件"></a>找到.app文件和.dsym文件</h2><ol>
+<li>.app文件：直接解压缩.ipa文件，在Payload文件夹里面取得</li>
+<li>.dsym文件：.xcarchive文件显示包内容，在dSYMs文件夹里面取得</li>
+</ol>
+<h2 id="找到symbolicatecrash文件"><a href="#找到symbolicatecrash文件" class="headerlink" title="找到symbolicatecrash文件"></a>找到symbolicatecrash文件</h2><p>在terminal输入以下命令找到symbolicatecrash文件路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /Applications/Xcode.app -name symbolicatecrash -type f</span><br></pre></td></tr></table></figure>
+
+<p>然后拷贝到自己新建的文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash ~/Desktop/crash</span><br></pre></td></tr></table></figure>
+
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>将上面所有文件放在同一个文件夹里面，然后在terminal中用cd命令进入这个文件夹，用下面命令进行解析，并输出txt文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./symbolicatecrash ./2018-5-1\ 上午11-07.crash &gt;log.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="附"><a href="#附" class="headerlink" title="附"></a>附</h2><ol>
+<li><p>Error: “DEVELOPER_DIR” is not defined at ./symbolicatecrash line 69.<br>解决办法，在terminal中输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export DEVELOPER_DIR=&quot;/Applications/Xcode.app/Contents/Developer&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看.app 文件 uuid</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dwarfdump --uuid xxx.app/xxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看.dsym 文件 uuid</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dwarfdump --uuid xxxx.dSYM</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zhangxiaopei.github.io/2020/05/09/symbolicatecrash解析crash文件/" data-id="cka0eysiz0000wafd6prw77cc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/09/iPhoneX适配总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iPhoneX适配总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/09/symbolicatecrash解析crash文件/">symbolicatecrash解析crash文件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/09/iPhoneX适配总结/">iPhoneX适配总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/用Github-Hexo搭建个人博客/">用Github+Hexo搭建个人博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="BLOG">
+<meta property="og:url" content="https://zhangxiaopei.github.io/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BLOG">
+  
+    <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">BLOG</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zhangxiaopei.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-symbolicatecrash解析crash文件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/09/symbolicatecrash解析crash文件/" class="article-date">
+  <time datetime="2020-05-09T12:46:42.598Z" itemprop="datePublished">2020-05-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/09/symbolicatecrash解析crash文件/">symbolicatecrash解析crash文件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="导出crash文件"><a href="#导出crash文件" class="headerlink" title="导出crash文件"></a>导出crash文件</h2><p>Xcode —&gt; Window —&gt; Devices and Simulators —&gt;  View Device Logs ，然后选中导出。<br><img src="//zhangxiaopei.github.io/2020/05/09/symbolicatecrash解析crash文件/1.jpeg" alt></p>
+<h2 id="找到-app文件和-dsym文件"><a href="#找到-app文件和-dsym文件" class="headerlink" title="找到.app文件和.dsym文件"></a>找到.app文件和.dsym文件</h2><ol>
+<li>.app文件：直接解压缩.ipa文件，在Payload文件夹里面取得</li>
+<li>.dsym文件：.xcarchive文件显示包内容，在dSYMs文件夹里面取得</li>
+</ol>
+<h2 id="找到symbolicatecrash文件"><a href="#找到symbolicatecrash文件" class="headerlink" title="找到symbolicatecrash文件"></a>找到symbolicatecrash文件</h2><p>在terminal输入以下命令找到symbolicatecrash文件路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /Applications/Xcode.app -name symbolicatecrash -type f</span><br></pre></td></tr></table></figure>
+
+<p>然后拷贝到自己新建的文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash ~/Desktop/crash</span><br></pre></td></tr></table></figure>
+
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>将上面所有文件放在同一个文件夹里面，然后在terminal中用cd命令进入这个文件夹，用下面命令进行解析，并输出txt文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./symbolicatecrash ./2018-5-1\ 上午11-07.crash &gt;log.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="附"><a href="#附" class="headerlink" title="附"></a>附</h2><ol>
+<li><p>Error: “DEVELOPER_DIR” is not defined at ./symbolicatecrash line 69.<br>解决办法，在terminal中输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export DEVELOPER_DIR=&quot;/Applications/Xcode.app/Contents/Developer&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看.app 文件 uuid</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dwarfdump --uuid xxx.app/xxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看.dsym 文件 uuid</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dwarfdump --uuid xxxx.dSYM</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zhangxiaopei.github.io/2020/05/09/symbolicatecrash解析crash文件/" data-id="cka0eysiz0000wafd6prw77cc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-iPhoneX适配总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/09/iPhoneX适配总结/" class="article-date">
+  <time datetime="2020-05-09T12:46:42.598Z" itemprop="datePublished">2020-05-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/09/iPhoneX适配总结/">iPhoneX适配总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>LaunchImage需要添加一张  1125*2436  尺寸的图</p>
+</li>
+<li><p>安全区域（safeAreaInsets）：<br>竖屏的情况下是（44，0，34，0）<br>横屏的情况下是（0，44，21，44）</p>
+</li>
+<li><p>刘海高度：30</p>
+</li>
+<li><p>设备名称：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if ([platform isEqualToString:@&quot;iPhone10,1&quot;]) return @&quot;iPhone 8&quot;;</span><br><span class="line">if ([platform isEqualToString:@&quot;iPhone10,4&quot;]) return @&quot;iPhone 8&quot;;</span><br><span class="line">if ([platform isEqualToString:@&quot;iPhone10,2&quot;]) return @&quot;iPhone 8 Plus&quot;;</span><br><span class="line">if ([platform isEqualToString:@&quot;iPhone10,5&quot;]) return @&quot;iPhone 8 Plus&quot;;</span><br><span class="line">if ([platform isEqualToString:@&quot;iPhone10,3&quot;]) return @&quot;iPhone X&quot;;</span><br><span class="line">if ([platform isEqualToString:@&quot;iPhone10,6&quot;]) return @&quot;iPhone X&quot;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解决tableview莫名奇妙的偏移:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (@available(iOS 11.0, *)) &#123;</span><br><span class="line">        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>iPhoneX pushViewController的时候假如设置了hidesBottomBarWhenPushed，tabbar会上移，所以在push的时候要重设一下tabbar的frame</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- (void)___pushViewController:(UIViewController *)viewController animated:(BOOL)animated &#123;</span><br><span class="line">    [self ___pushViewController:viewController animated:animated];</span><br><span class="line"></span><br><span class="line">    if (isiPhoneX) &#123;</span><br><span class="line">        // 修改tabBra的frame</span><br><span class="line">        CGRect frame = self.tabBarController.tabBar.frame;</span><br><span class="line">        frame.origin.y = [UIScreen mainScreen].bounds.size.height - frame.size.height;</span><br><span class="line">        self.tabBarController.tabBar.frame = frame;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>iOS11之后的导航栏视图层级变了，如果自定义导航栏按钮间距的话要重新适配</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zhangxiaopei.github.io/2020/05/09/iPhoneX适配总结/" data-id="cka0eysj50002wafdrzodx602" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-用Github-Hexo搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/05/用Github-Hexo搭建个人博客/" class="article-date">
+  <time datetime="2019-08-05T08:43:50.000Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/用Github-Hexo搭建个人博客/">用Github+Hexo搭建个人博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="用Github-Hexo搭建个人博客"><a href="#用Github-Hexo搭建个人博客" class="headerlink" title="用Github+Hexo搭建个人博客"></a>用Github+Hexo搭建个人博客</h1><p>点击“New”按钮，在Repository Name处输入“用户名.github.io”，注意此处的“用户名”必须为Github的帐号名称，例如截图中需输入“zhangxiaopei.github.io”，这是固定写法，写错的话后续访问会找不到界面（404）</p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/1.jpg" alt="1"></p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/2.jpg" alt="2"></p>
+<h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><ol>
+<li>下载nvm</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<p>Tips： 如果这里出现443端口连接被拒 (<code>Failed to connect to raw.githubusercontent.com port 443: Connection refused</code>) 的情况，一般是因为墙的原因，可以配置下代理:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export https_proxy=http://127.0.0.1:xxx http_proxy=http://127.0.0.1:xxx all_proxy=socks5://127.0.0.1:xxx</span><br></pre></td></tr></table></figure>
+
+<p>再执行下上面命令即可。</p>
+<ol start="2">
+<li>配置环境变量</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br><span class="line">[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm bash_completion</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>安装 node</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install stable</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>安装 hexo</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h1 id="hexo的使用"><a href="#hexo的使用" class="headerlink" title="hexo的使用"></a>hexo的使用</h1><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blogProjectName</span><br></pre></td></tr></table></figure>
+
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/3.jpg" alt="3"></p>
+<p>初始化完成之后，就会在指定目录下创建一个文件夹</p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/4.jpg" alt="4"></p>
+<p>其中_config.yml是配置文件，source存放所有md文件，themes存放主题信息</p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/5.jpg" alt="5"></p>
+<p>然后就可以在浏览器输入 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 预览了</p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/6.jpg" alt="6"></p>
+<h2 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;title&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/7.jpg" alt="7"></p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/8.jpg" alt="8"></p>
+<p>当然也可以直接把已经存在md文件拖进来，然后在顶部加上以下代码，否则预览的时候旁边的导航栏会取不到title</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: title</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2 id="生成静态网页"><a href="#生成静态网页" class="headerlink" title="生成静态网页"></a>生成静态网页</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/9.jpg" alt="9"></p>
+<p>刷新一下 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 就可以看到新建的博客了</p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/10.jpg" alt="10"></p>
+<h2 id="将博客地址部署到服务器"><a href="#将博客地址部署到服务器" class="headerlink" title="将博客地址部署到服务器"></a>将博客地址部署到服务器</h2><p>修改_config.yml中deploy的配置</p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/11.jpg" alt="11"></p>
+<p>然后执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>部署成功之后，就可以输入 <a href="https://zhangxiaopei.github.io">https://zhangxiaopei.github.io</a> 查看自己的博客啦～～</p>
+<p>Tips: 出现 <code>Deployer not found: github</code> 错误，可安装下插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片使用"><a href="#图片使用" class="headerlink" title="图片使用"></a>图片使用</h2><ol>
+<li>修改_config.yml中post_asset_folder参数，改为true</li>
+</ol>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/12.jpg" alt="12"></p>
+<ol start="2">
+<li>安装插件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>运行 hexo n 命令生成文件的时候，就会自动创建文件夹了</li>
+</ol>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/13.jpg" alt="13"></p>
+<ol start="4">
+<li>在md文件中用 <code>![](xxx/xxx.jpg)</code> 的方式引用，执行hexo g命令后，可在public文件夹中指定路径下的index.html文件中看到图片的路径</li>
+</ol>
+<p>Tips: 图片引用使用此路径 (xxxx/图片名.jpg) 即可，不要使用绝对路径</p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/14.jpg" alt="14"></p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/15.jpg" alt="15"></p>
+<p>其中的 yoursite.com 为预览图片时候访问的域名，可以在_config.yml中配置，如果是本地预览，需将url改成 <a href="http://localhost:4000，如果要部署到服务器，将url改成" target="_blank" rel="noopener">http://localhost:4000，如果要部署到服务器，将url改成</a> <a href="https://zhangxiaopei.github.io">https://zhangxiaopei.github.io</a> 即可</p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/16.jpg" alt="16"></p>
+<p>备注：</p>
+<p>由于hexo3版本后对很多插件支持有问题，hexo-asset-image插件在处理data.permalink链接时出现路径错误，导致index.html文件中图片的默认路径不对，可下载以下插件修复</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/7ym0n/hexo-asset-image --sa</span><br></pre></td></tr></table></figure>
+
+<h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><p>官方下载地址 <a href="https://hexo.io/themes/index.html" target="_blank" rel="noopener">https://hexo.io/themes/index.html</a></p>
+<p>下载后放进themes文件夹里，然后修改_config.yml文件中的theme参数即可</p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/17.jpg" alt="17"></p>
+<p><img src="//zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/18.jpg" alt="18"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zhangxiaopei.github.io/2019/08/05/用Github-Hexo搭建个人博客/" data-id="cka0eysj30001wafdby8yc3zd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/09/symbolicatecrash解析crash文件/">symbolicatecrash解析crash文件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/09/iPhoneX适配总结/">iPhoneX适配总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/用Github-Hexo搭建个人博客/">用Github+Hexo搭建个人博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

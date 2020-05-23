@@ -25,12 +25,12 @@
 <meta property="og:site_name" content="BLOG">
 <meta property="og:description" content="整体流程第 1 步依次点击在 “钥匙串访问” - “证书助理” - “从证书颁发机构请求证书”，按提示操作完成后，会生成一个 CertificateSigningRequest 文件， CertificateSigningRequest 文件里面包含着公钥，而私钥保存在本地电脑里。 第 2 步苹果自己有固定的一对公私钥，私钥在苹果后台，公钥在每个 iOS 设备上。 第 3 步把 Certific">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://localhost:4000/2020/05/11/iOS-App签名的原理/1.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/1.png">
 <meta property="og:updated_time" content="2020-05-11T15:16:19.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS App签名的原理">
 <meta name="twitter:description" content="整体流程第 1 步依次点击在 “钥匙串访问” - “证书助理” - “从证书颁发机构请求证书”，按提示操作完成后，会生成一个 CertificateSigningRequest 文件， CertificateSigningRequest 文件里面包含着公钥，而私钥保存在本地电脑里。 第 2 步苹果自己有固定的一对公私钥，私钥在苹果后台，公钥在每个 iOS 设备上。 第 3 步把 Certific">
-<meta name="twitter:image" content="https://localhost:4000/2020/05/11/iOS-App签名的原理/1.png">
+<meta name="twitter:image" content="https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/1.png">
   <!-- Canonical links -->
   <link rel="canonical" href="https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/index.html">
   
@@ -310,7 +310,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><img src="//localhost:4000/2020/05/11/iOS-App签名的原理/1.png" alt></p>
+        <p><img src="//zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/1.png" alt></p>
 <h1 id="整体流程"><a href="#整体流程" class="headerlink" title="整体流程"></a>整体流程</h1><h3 id="第-1-步"><a href="#第-1-步" class="headerlink" title="第 1 步"></a>第 1 步</h3><p>依次点击在 “钥匙串访问” - “证书助理” - “从证书颁发机构请求证书”，按提示操作完成后，会生成一个 CertificateSigningRequest 文件， CertificateSigningRequest 文件里面包含着公钥，而私钥保存在本地电脑里。</p>
 <h3 id="第-2-步"><a href="#第-2-步" class="headerlink" title="第 2 步"></a>第 2 步</h3><p>苹果自己有固定的一对公私钥，私钥在苹果后台，公钥在每个 iOS 设备上。</p>
 <h3 id="第-3-步"><a href="#第-3-步" class="headerlink" title="第 3 步"></a>第 3 步</h3><p>把 CertificateSigningRequest 文件传到苹果后台生成证书，并下载到本地。安装在含有私钥的电脑上，钥匙串访问就会把证书和私钥关联起来，可在钥匙串访问导出 p12 文件。</p>

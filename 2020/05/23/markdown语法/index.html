@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>markdown语法 | 首页</title>
+  <meta name="description" content="目录 标题 缩进 对齐方式 斜体、粗体、加粗斜体、删除线 链接 图片 列表 目录与跳转 多级引用 字体、字号、颜色 代码块 表格   1. 标题123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题  &amp;lt;!--最多6级标题--&amp;gt;  效果： 一级标题二级标题三级标题四级标题五级标题六级标题 2. 缩进123&amp;amp;emsp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown语法">
+<meta property="og:url" content="https://zhangxiaopei.github.io/2020/05/23/markdown语法/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="目录 标题 缩进 对齐方式 斜体、粗体、加粗斜体、删除线 链接 图片 列表 目录与跳转 多级引用 字体、字号、颜色 代码块 表格   1. 标题123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题  &amp;lt;!--最多6级标题--&amp;gt;  效果： 一级标题二级标题三级标题四级标题五级标题六级标题 2. 缩进123&amp;amp;emsp;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-23T14:56:21.649Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="markdown语法">
+<meta name="twitter:description" content="目录 标题 缩进 对齐方式 斜体、粗体、加粗斜体、删除线 链接 图片 列表 目录与跳转 多级引用 字体、字号、颜色 代码块 表格   1. 标题123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题  &amp;lt;!--最多6级标题--&amp;gt;  效果： 一级标题二级标题三级标题四级标题五级标题六级标题 2. 缩进123&amp;amp;emsp;">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://zhangxiaopei.github.io/2020/05/23/markdown语法/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/zhangxiaopei" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">张小培</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">iOS Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shenzhen, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Cocoapods/">Cocoapods</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/博客/">博客</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发调试/">开发调试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络基础/">网络基础</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/博客/">博客</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/23/markdown语法/" class="title">markdown语法</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-23T09:52:35.000Z" itemprop="datePublished">2020-05-23</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Cocoapods/">Cocoapods</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/23/公有Pod库/" class="title">公有Pod库</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-23T07:18:54.000Z" itemprop="datePublished">2020-05-23</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/11/iOS-App签名的原理/" class="title">iOS App签名的原理</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-11T14:54:14.000Z" itemprop="datePublished">2020-05-11</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/开发调试/">开发调试</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/11/symbolicatecrash解析crash文件/" class="title">symbolicatecrash解析crash文件</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-11T14:49:03.601Z" itemprop="datePublished">2020-05-11</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/网络基础/">网络基础</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/10/加密、数字签名与证书/" class="title">加密、数字签名与证书</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-10T14:48:26.000Z" itemprop="datePublished">2020-05-10</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-markdown语法" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      markdown语法
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/05/23/markdown语法/" class="article-date">
+	  <time datetime="2020-05-23T09:52:35.000Z" itemprop="datePublished">2020-05-23</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/博客/">博客</a>
+  </span>
+
+        
+
+        
+
+        <!-- <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/23/markdown语法/#comments" class="article-comment-link">评论</a></span> -->
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 643(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <hr>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li><a href="#jump1">标题</a></li>
+<li><a href="#jump2">缩进</a></li>
+<li><a href="#jump3">对齐方式</a></li>
+<li><a href="#jump4">斜体、粗体、加粗斜体、删除线</a></li>
+<li><a href="#jump5">链接</a></li>
+<li><a href="#jump6">图片</a></li>
+<li><a href="#jump7">列表</a></li>
+<li><a href="#jump8">目录与跳转</a></li>
+<li><a href="#jump9">多级引用</a></li>
+<li><a href="#jump10">字体、字号、颜色</a></li>
+<li><a href="#jump11">代码块</a></li>
+<li><a href="#jump12">表格</a></li>
+</ol>
+<hr>
+<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a><span id="jump1">1. 标题</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题  &lt;!--最多6级标题--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
+<h3 id="2-缩进"><a href="#2-缩进" class="headerlink" title="2. 缩进"></a><span id="jump2">2. 缩进</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;emsp;或&amp;#8195; //全角</span><br><span class="line">&amp;ensp;或&amp;#8194; //半角</span><br><span class="line">&amp;nbsp;或&amp;#160;  //半角之半角</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>&emsp;或&#8195; //全角<br>&ensp;或&#8194; //半角<br>&nbsp;或&#160;  //半角之半角</p>
+<hr>
+<h3 id="3-对齐方式"><a href="#3-对齐方式" class="headerlink" title="3. 对齐方式"></a><span id="jump3">3. 对齐方式</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;行中心对齐&lt;/center&gt;</span><br><span class="line">&lt;p align=&quot;left&quot;&gt;行左对齐&lt;/p&gt;</span><br><span class="line">&lt;p align=&quot;right&quot;&gt;行右对齐&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<center>行中心对齐</center>
+<p align="left">行左对齐</p>
+<p align="right">行右对齐</p>
+
+<hr>
+<h3 id="4-斜体、粗体、加粗斜体、删除线"><a href="#4-斜体、粗体、加粗斜体、删除线" class="headerlink" title="4. 斜体、粗体、加粗斜体、删除线"></a><span id="jump4">4. 斜体、粗体、加粗斜体、删除线</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*或_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><em>斜体</em>或<em>斜体</em><br><strong>粗体</strong><br><strong><em>加粗斜体</em></strong><br><del>删除线</del></p>
+<hr>
+<h3 id="5-链接"><a href="#5-链接" class="headerlink" title="5. 链接"></a><span id="jump5">5. 链接</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[百度](https://www.baidu.com)</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
+<hr>
+<h3 id="6-图片"><a href="#6-图片" class="headerlink" title="6. 图片"></a><span id="jump6">6. 图片</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![xxx](/xxx/xxx.png)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="7-列表"><a href="#7-列表" class="headerlink" title="7. 列表"></a><span id="jump7">7. 列表</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 无序列表项 一</span><br><span class="line">+ 无序列表项 二</span><br><span class="line">- 无序列表项 三</span><br><span class="line"></span><br><span class="line">1. 有序列表项 一</span><br><span class="line">2. 有序列表项 二</span><br><span class="line">3. 有序列表项 三</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<ul>
+<li>无序列表项 一</li>
+</ul>
+<ul>
+<li>无序列表项 二</li>
+</ul>
+<ul>
+<li>无序列表项 三</li>
+</ul>
+<ol>
+<li>有序列表项 一</li>
+<li>有序列表项 二</li>
+<li>有序列表项 三</li>
+</ol>
+<hr>
+<h3 id="8-目录与跳转"><a href="#8-目录与跳转" class="headerlink" title="8. 目录与跳转"></a><span id="jump8">8. 目录与跳转</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">----</span><br><span class="line">## 目录</span><br><span class="line">1. [目录1](#jump1)</span><br><span class="line">2. [目录2](#jump2)</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">### &lt;span id=&quot;jump1&quot;&gt;1. 目录1&lt;/span&gt;</span><br><span class="line">---</span><br><span class="line">### &lt;span id=&quot;jump2&quot;&gt;2. 目录2&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="9-多级引用"><a href="#9-多级引用" class="headerlink" title="9. 多级引用"></a><span id="jump9">9. 多级引用</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 多级引用</span><br><span class="line">&gt;&gt; 多级引用</span><br><span class="line">&gt; 多级引用</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>多级引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>多级引用</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>多级引用</p>
+</blockquote>
+<hr>
+<h3 id="10-字体、字号、颜色"><a href="#10-字体、字号、颜色" class="headerlink" title="10. 字体、字号、颜色"></a><span id="jump10">10. 字体、字号、颜色</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;font face=&quot;黑体&quot;&gt;我是黑体字&lt;/font&gt;</span><br><span class="line">&lt;font face=&quot;微软雅黑&quot;&gt;我是微软雅黑&lt;/font&gt;</span><br><span class="line">&lt;font face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/font&gt;</span><br><span class="line">&lt;font color=#0099ff size=12 face=&quot;黑体&quot;&gt;黑体&lt;/font&gt;</span><br><span class="line">&lt;font color=gray size=5&gt;gray&lt;/font&gt;</span><br><span class="line">&lt;font color=#00ffff size=3&gt;null&lt;/font&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><font face="黑体">我是黑体字</font><br><font face="微软雅黑">我是微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font color="#0099ff" size="12" face="黑体">黑体</font><br><font color="gray" size="5">gray</font><br><font color="#00ffff" size="3">null</font></p>
+<hr>
+<h3 id="11-代码块"><a href="#11-代码块" class="headerlink" title="11. 代码块"></a><span id="jump11">11. 代码块</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">`代码块`</span><br><span class="line"></span><br><span class="line">、、、</span><br><span class="line">代码块</span><br><span class="line">、、、</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><code>代码块</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码块</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="12-表格"><a href="#12-表格" class="headerlink" title="12. 表格"></a><span id="jump12">12. 表格</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|列1|列2|列3|</span><br><span class="line">|-|-|-|</span><br><span class="line">|值1|值2|值3|</span><br><span class="line">|值1|值2|值3|</span><br><span class="line">|值1|值2|值3|</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th>列1</th>
+<th>列2</th>
+<th>列3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>值1</td>
+<td>值2</td>
+<td>值3</td>
+</tr>
+<tr>
+<td>值1</td>
+<td>值2</td>
+<td>值3</td>
+</tr>
+<tr>
+<td>值1</td>
+<td>值2</td>
+<td>值3</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://zhangxiaopei.github.io/2020/05/23/markdown语法/" title="markdown语法" target="_blank" rel="external">https://zhangxiaopei.github.io/2020/05/23/markdown语法/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/zhangxiaopei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/zhangxiaopei" target="_blank"><span class="text-dark">张小培</span><small class="ml-1x">iOS Developer</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2020/05/23/公有Pod库/" title="公有Pod库"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <!-- <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/zhangxiaopei" target="_blank"> zhangxiaopei </a>base on <a href="https://github.com/Ruffianjiang/hexo-theme-dawn" target="_blank">dawn</a>.
+        </div>
+    </div>
+</footer> -->
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+
+</body>
+</html>

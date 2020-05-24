@@ -17,22 +17,33 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>iOS App签名的原理 | 首页</title>
-  <meta name="description" content="整体流程第 1 步依次点击在 “钥匙串访问” - “证书助理” - “从证书颁发机构请求证书”，按提示操作完成后，会生成一个 CertificateSigningRequest 文件， CertificateSigningRequest 文件里面包含着公钥，而私钥保存在本地电脑里。 第 2 步苹果自己有固定的一对公私钥，私钥在苹果后台，公钥在每个 iOS 设备上。 第 3 步把 Certific">
+  <title>Flutter入门01_第一个Flutter项目 | 首页</title>
+  <meta name="description" content="目录 Flutter SDK下载 环境变量配置 检查开发环境 创建flutter项目 修改flutter项目权限 Xcode打开Flutter项目 使用VSCode开发Flutter   1. Flutter SDK下载Flutter下载地址: Flutter SDK releases  - Flutter   2. 环境变量配置 编辑.bash_profile文件（如果是安装zsh，需编辑.z">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS App签名的原理">
-<meta property="og:url" content="https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/index.html">
+<meta property="og:title" content="Flutter入门01_第一个Flutter项目">
+<meta property="og:url" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="整体流程第 1 步依次点击在 “钥匙串访问” - “证书助理” - “从证书颁发机构请求证书”，按提示操作完成后，会生成一个 CertificateSigningRequest 文件， CertificateSigningRequest 文件里面包含着公钥，而私钥保存在本地电脑里。 第 2 步苹果自己有固定的一对公私钥，私钥在苹果后台，公钥在每个 iOS 设备上。 第 3 步把 Certific">
+<meta property="og:description" content="目录 Flutter SDK下载 环境变量配置 检查开发环境 创建flutter项目 修改flutter项目权限 Xcode打开Flutter项目 使用VSCode开发Flutter   1. Flutter SDK下载Flutter下载地址: Flutter SDK releases  - Flutter   2. 环境变量配置 编辑.bash_profile文件（如果是安装zsh，需编辑.z">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/1.png">
-<meta property="og:updated_time" content="2020-05-11T15:16:19.697Z">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/1.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/2.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/3.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/4.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/5.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/6.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/7.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/8.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/9.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/10.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/11.png">
+<meta property="og:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/12.png">
+<meta property="og:updated_time" content="2020-05-24T15:35:04.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS App签名的原理">
-<meta name="twitter:description" content="整体流程第 1 步依次点击在 “钥匙串访问” - “证书助理” - “从证书颁发机构请求证书”，按提示操作完成后，会生成一个 CertificateSigningRequest 文件， CertificateSigningRequest 文件里面包含着公钥，而私钥保存在本地电脑里。 第 2 步苹果自己有固定的一对公私钥，私钥在苹果后台，公钥在每个 iOS 设备上。 第 3 步把 Certific">
-<meta name="twitter:image" content="https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/1.png">
+<meta name="twitter:title" content="Flutter入门01_第一个Flutter项目">
+<meta name="twitter:description" content="目录 Flutter SDK下载 环境变量配置 检查开发环境 创建flutter项目 修改flutter项目权限 Xcode打开Flutter项目 使用VSCode开发Flutter   1. Flutter SDK下载Flutter下载地址: Flutter SDK releases  - Flutter   2. 环境变量配置 编辑.bash_profile文件（如果是安装zsh，需编辑.z">
+<meta name="twitter:image" content="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/1.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/index.html">
+  <link rel="canonical" href="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/index.html">
   
     <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
   
@@ -273,14 +284,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-iOS-App签名的原理" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Flutter入门01_第一个Flutter项目" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      iOS App签名的原理
+      Flutter入门01_第一个Flutter项目
     </h1>
   
 
@@ -288,19 +299,24 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/05/11/iOS-App签名的原理/" class="article-date">
-	  <time datetime="2020-05-11T14:54:14.000Z" itemprop="datePublished">2020-05-11</time>
+	<a href="/2020/05/24/Flutter入门01_第一个Flutter项目/" class="article-date">
+	  <time datetime="2020-05-24T03:05:45.000Z" itemprop="datePublished">2020-05-24</time>
 	</a>
 </span>
         
-        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Flutter/">Flutter</a>
+  </span>
 
         
 
-        <!-- <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/11/iOS-App签名的原理/#comments" class="article-comment-link">评论</a></span> -->
+        
+
+        <!-- <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/24/Flutter入门01_第一个Flutter项目/#comments" class="article-comment-link">评论</a></span> -->
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 434(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 343(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -310,14 +326,76 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><img src="//zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/1.png" alt></p>
-<h1 id="整体流程"><a href="#整体流程" class="headerlink" title="整体流程"></a>整体流程</h1><h3 id="第-1-步"><a href="#第-1-步" class="headerlink" title="第 1 步"></a>第 1 步</h3><p>依次点击在 “钥匙串访问” - “证书助理” - “从证书颁发机构请求证书”，按提示操作完成后，会生成一个 CertificateSigningRequest 文件， CertificateSigningRequest 文件里面包含着公钥，而私钥保存在本地电脑里。</p>
-<h3 id="第-2-步"><a href="#第-2-步" class="headerlink" title="第 2 步"></a>第 2 步</h3><p>苹果自己有固定的一对公私钥，私钥在苹果后台，公钥在每个 iOS 设备上。</p>
-<h3 id="第-3-步"><a href="#第-3-步" class="headerlink" title="第 3 步"></a>第 3 步</h3><p>把 CertificateSigningRequest 文件传到苹果后台生成证书，并下载到本地。安装在含有私钥的电脑上，钥匙串访问就会把证书和私钥关联起来，可在钥匙串访问导出 p12 文件。</p>
-<h3 id="第-4-步"><a href="#第-4-步" class="headerlink" title="第 4 步"></a>第 4 步</h3><p>创建 Provisioning Profile 文件，配置证书 / AppID / 权限 / 设备等，最后下载 Provisioning Profile 文件。</p>
-<h3 id="第-5-步"><a href="#第-5-步" class="headerlink" title="第 5 步"></a>第 5 步</h3><p>XCode 会通过第 3 步下载回来的证书（存着公钥），在本地找到对应的私钥（第一步生成的），用本地私钥去签名 App，并把 Provisioning Profile 文件命名为 embedded.mobileprovision 一起打包进去。这里对 App 的签名数据保存分两部分，Mach-O 可执行文件会把签名直接写入这个文件里，其他资源文件则会保存在 _CodeSignature 目录下。</p>
-<h3 id="第-6-步"><a href="#第-6-步" class="headerlink" title="第 6 步"></a>第 6 步</h3><p>在安装时，iOS 系统取得证书，通过系统内置的公钥 A，去验证 embedded.mobileprovision 的数字签名是否正确，里面的证书签名也会再验一遍。</p>
-<h3 id="第-7-步"><a href="#第-7-步" class="headerlink" title="第 7 步"></a>第 7 步</h3><p>确保了 embedded.mobileprovision 里的数据都是苹果授权以后，就可以取出里面的数据，做各种验证，包括用公钥 L 验证APP签名，验证设备 ID 是否在 ID 列表上，AppID 是否对应得上，权限开关是否跟 APP 里的 Entitlements 对应等。</p>
+        <hr>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
+<li><a href="#jump1">Flutter SDK下载</a></li>
+<li><a href="#jump2">环境变量配置</a></li>
+<li><a href="#jump3">检查开发环境</a></li>
+<li><a href="#jump4">创建flutter项目</a></li>
+<li><a href="#jump5">修改flutter项目权限</a></li>
+<li><a href="#jump6">Xcode打开Flutter项目</a></li>
+<li><a href="#jump7">使用VSCode开发Flutter</a></li>
+</ol>
+<hr>
+<h3 id="1-Flutter-SDK下载"><a href="#1-Flutter-SDK下载" class="headerlink" title="1. Flutter SDK下载"></a><span id="jump1">1. Flutter SDK下载</span></h3><p>Flutter下载地址: <a href="https://flutter.dev/docs/development/tools/sdk/releases?tab=macos" target="_blank" rel="noopener">Flutter SDK releases  - Flutter</a></p>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/1.png" alt></p>
+<hr>
+<h3 id="2-环境变量配置"><a href="#2-环境变量配置" class="headerlink" title="2. 环境变量配置"></a><span id="jump2">2. 环境变量配置</span></h3><ul>
+<li>编辑.bash_profile文件（如果是安装zsh，需编辑.zshrc文件）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile         //terminal</span><br><span class="line">vim ~/.zshrc                  //zsh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将Flutter路径的bin目录以及Flutter国内镜像配置到环境变量里面</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PATH=&quot;/Users/zhangpeizeng/flutter/bin:$PATH&quot;</span><br><span class="line">export PUB_HOSTED_URL=&quot;https://pub.flutter-io.cn&quot;</span><br><span class="line">export FLUTTER_STORAGE_BASE_URL=&quot;https://storage.flutter-io.cn&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重新执行.bash_profile文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检查环境变量是否配置正确</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter -h</span><br></pre></td></tr></table></figure>
+
+<p>如果有出现帮助信息，即代表环境变量配置ok</p>
+<hr>
+<h3 id="3-检查开发环境"><a href="#3-检查开发环境" class="headerlink" title="3. 检查开发环境"></a><span id="jump3">3. 检查开发环境</span></h3><ul>
+<li>执行<code>flutter doctor</code>会检查iOS和安卓开发环境的都配置情况</li>
+</ul>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/2.png" alt></p>
+<ul>
+<li>根据提示执行指定命令</li>
+</ul>
+<p>例如图中提示执行<code>sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer</code></p>
+<p>执行后再通过<code>flutter doctor</code>检查</p>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/3.png" alt></p>
+<hr>
+<h3 id="4-创建flutter项目"><a href="#4-创建flutter项目" class="headerlink" title="4. 创建flutter项目"></a><span id="jump4">4. 创建flutter项目</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo flutter create flutterdemo</span><br></pre></td></tr></table></figure>
+
+<p>注意项目名不能有大写字母，会报错</p>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/4.png" alt></p>
+<hr>
+<h3 id="5-修改flutter项目权限"><a href="#5-修改flutter项目权限" class="headerlink" title="5. 修改flutter项目权限"></a><span id="jump5">5. 修改flutter项目权限</span></h3><p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/5.png" alt></p>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/6.png" alt></p>
+<hr>
+<h3 id="6-Xcode打开Flutter项目"><a href="#6-Xcode打开Flutter项目" class="headerlink" title="6. Xcode打开Flutter项目"></a><span id="jump6">6. Xcode打开Flutter项目</span></h3><p>双击Runner.xcodeproj，然后运行</p>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/7.png" alt></p>
+<p>如果没有正确修改权限的话，会报错</p>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/8.png" alt></p>
+<hr>
+<h3 id="7-使用VSCode开发Flutter"><a href="#7-使用VSCode开发Flutter" class="headerlink" title="7. 使用VSCode开发Flutter"></a><span id="jump7">7. 使用VSCode开发Flutter</span></h3><ul>
+<li>安装插件：Dart、Flutter和Awesome Flutter Snippets</li>
+</ul>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/9.png" alt></p>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/10.png" alt></p>
+<ul>
+<li>将 flutterdemo 拖进 VSCode，然后右下角选择模拟器，然后在 TERMINAL 中执行 <code>flutter run</code>，即可运行 flutter项目</li>
+</ul>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/11.png" alt></p>
+<p><img src="//zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/12.png" alt></p>
 
       
     </div>
@@ -327,7 +405,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/" title="iOS App签名的原理" target="_blank" rel="external">https://zhangxiaopei.github.io/2020/05/11/iOS-App签名的原理/</a>
+      <a href="https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/" title="Flutter入门01_第一个Flutter项目" target="_blank" rel="external">https://zhangxiaopei.github.io/2020/05/24/Flutter入门01_第一个Flutter项目/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -371,13 +449,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2020/05/23/公有Pod库/" title="公有Pod库"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2020/05/11/symbolicatecrash解析crash文件/" title="symbolicatecrash解析crash文件"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/05/24/私有Pod库/" title="私有Pod库"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

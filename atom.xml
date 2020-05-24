@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangxiaopei.github.io/"/>
-  <updated>2020-05-23T14:56:21.649Z</updated>
+  <updated>2020-05-24T01:31:14.916Z</updated>
   <id>https://zhangxiaopei.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>私有Pod库</title>
+    <link href="https://zhangxiaopei.github.io/2020/05/24/%E7%A7%81%E6%9C%89Pod%E5%BA%93/"/>
+    <id>https://zhangxiaopei.github.io/2020/05/24/%E7%A7%81%E6%9C%89Pod%E5%BA%93/</id>
+    <published>2020-05-24T01:05:45.000Z</published>
+    <updated>2020-05-24T01:31:14.916Z</updated>
+    
+    <content type="html"><![CDATA[<p>私有Pod库的创建和使用方法基本和 <a href="/2020/05/23/公有Pod库">公有Pod库</a> 一样, 唯一不一样的地方是他们的Spec Repo不一样, 公有Pod库的 podspec 由 CocoaPods/Specs 管理, 而私有Pod库则需要自己建立一个仓库来管理 podspec. 流程可看 <a href="https://guides.cocoapods.org/making/private-cocoapods.html" target="_blank" rel="noopener">官网</a></p><hr><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol><li><a href="#jump1">创建一个存放Spec Repo的Repositories</a></li><li><a href="#jump2">创建私有Spec Repo</a></li><li><a href="#jump3">发布Pod库</a></li><li><a href="#jump4">Podfile中使用</a></li></ol><hr><h3 id="1-创建一个存放Spec-Repo的Repositories"><a href="#1-创建一个存放Spec-Repo的Repositories" class="headerlink" title="1. 创建一个存放Spec Repo的Repositories"></a><span id="jump1">1. 创建一个存放Spec Repo的Repositories</span></h3><p>在Github或者自己的git服务器中新建一个Repositories, 用来存放和管理Spec Repo</p><hr><h3 id="2-创建私有Spec-Repo"><a href="#2-创建私有Spec-Repo" class="headerlink" title="2. 创建私有Spec Repo"></a><span id="jump2">2. 创建私有Spec Repo</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo add [Private Repo Name] [GitHub HTTPS clone URL]</span><br></pre></td></tr></table></figure><hr><h3 id="3-发布Pod库"><a href="#3-发布Pod库" class="headerlink" title="3. 发布Pod库"></a><span id="jump3">3. 发布Pod库</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo push [Private Repo Name] lib.podspec</span><br></pre></td></tr></table></figure><hr><h3 id="4-Podfile中使用"><a href="#4-Podfile中使用" class="headerlink" title="4. Podfile中使用"></a><span id="jump4">4. Podfile中使用</span></h3><p>在Podfile文件上方，添加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source &apos;[GitHub HTTPS clone URL]&apos;</span><br></pre></td></tr></table></figure><p>就可以使用自己的私有Pod库了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;私有Pod库的创建和使用方法基本和 &lt;a href=&quot;/2020/05/23/公有Pod库&quot;&gt;公有Pod库&lt;/a&gt; 一样, 唯一不一样的地方是他们的Spec Repo不一样, 公有Pod库的 podspec 由 CocoaPods/Specs 管理, 而私有Pod库则需要自
+      
+    
+    </summary>
+    
+    
+      <category term="Cocoapods" scheme="https://zhangxiaopei.github.io/categories/Cocoapods/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>markdown语法</title>

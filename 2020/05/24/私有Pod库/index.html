@@ -17,17 +17,20 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>分类 | 首页</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://zhangxiaopei.github.io/categories/index.html">
+  <title>私有Pod库 | 首页</title>
+  <meta name="description" content="私有Pod库的创建和使用方法基本和 公有Pod库 一样, 唯一不一样的地方是他们的Spec Repo不一样, 公有Pod库的 podspec 由 CocoaPods/Specs 管理, 而私有Pod库则需要自己建立一个仓库来管理 podspec. 流程可看 官网  目录 创建一个存放Spec Repo的Repositories 创建私有Spec Repo 发布Pod库 Podfile中使用   1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="私有Pod库">
+<meta property="og:url" content="https://zhangxiaopei.github.io/2020/05/24/私有Pod库/index.html">
 <meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="私有Pod库的创建和使用方法基本和 公有Pod库 一样, 唯一不一样的地方是他们的Spec Repo不一样, 公有Pod库的 podspec 由 CocoaPods/Specs 管理, 而私有Pod库则需要自己建立一个仓库来管理 podspec. 流程可看 官网  目录 创建一个存放Spec Repo的Repositories 创建私有Spec Repo 发布Pod库 Podfile中使用   1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-10T05:24:11.629Z">
+<meta property="og:updated_time" content="2020-05-24T01:31:14.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="私有Pod库">
+<meta name="twitter:description" content="私有Pod库的创建和使用方法基本和 公有Pod库 一样, 唯一不一样的地方是他们的Spec Repo不一样, 公有Pod库的 podspec 由 CocoaPods/Specs 管理, 而私有Pod库则需要自己建立一个仓库来管理 podspec. 流程可看 官网  目录 创建一个存放Spec Repo的Repositories 创建私有Spec Repo 发布Pod库 Podfile中使用   1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zhangxiaopei.github.io/categories/index.html">
+  <link rel="canonical" href="https://zhangxiaopei.github.io/2020/05/24/私有Pod库/index.html">
   
     <link rel="alternate" href="/atom.xml" title="BLOG" type="application/atom+xml">
   
@@ -265,164 +268,145 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="article article-categories article-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">分类</h1>
-      <p class="text-muted hidden-xs">共 4 个分类</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/categories">All</a></li>
-          
-          <li><a href="/categories/博客/">博客</a></li>
-          
-          <li><a href="/categories/开发调试/">开发调试</a></li>
-          
-          <li><a href="/categories/Cocoapods/">Cocoapods</a></li>
-          
-          <li><a href="/categories/网络基础/">网络基础</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-私有Pod库" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
       
-      <div class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse博客" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              博客
-            </a>
-            <small class="text-muted">(Total 2 articles)</small>
-          </h3>
-        </div>
-        <div id="collapse博客" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading博客">
-          <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/2020/05/23/markdown语法/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-05-23T09:52:35.000Z" itemprop="datePublished">2020-05-23</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> markdown语法
-</a>
+        
+  
+    <h1 class="article-title" itemprop="name">
+      私有Pod库
+    </h1>
+  
 
-
-              
-                
-<a href="/2019/08/05/用Github-Hexo搭建个人博客/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-08-05T08:43:50.000Z" itemprop="datePublished">2019-08-05</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 用Github+Hexo搭建个人博客
-</a>
-
-
-              
-            </div>
-          </div>
-        </div>
-      </div>
       
-      <div class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse开发调试" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              开发调试
-            </a>
-            <small class="text-muted">(Total 1 articles)</small>
-          </h3>
-        </div>
-        <div id="collapse开发调试" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading开发调试">
-          <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/2020/05/11/symbolicatecrash解析crash文件/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-05-11T14:49:03.601Z" itemprop="datePublished">2020-05-11</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> symbolicatecrash解析crash文件
-</a>
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/05/24/私有Pod库/" class="article-date">
+	  <time datetime="2020-05-24T01:05:45.000Z" itemprop="datePublished">2020-05-24</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Cocoapods/">Cocoapods</a>
+  </span>
 
+        
 
-              
-            </div>
-          </div>
-        </div>
+        
+
+        <!-- <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/24/私有Pod库/#comments" class="article-comment-link">评论</a></span> -->
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 193(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+	
+
       </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
       
-      <div class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapseCocoapods" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              Cocoapods
-            </a>
-            <small class="text-muted">(Total 2 articles)</small>
-          </h3>
-        </div>
-        <div id="collapseCocoapods" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingCocoapods">
-          <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/2020/05/23/公有Pod库/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-05-23T07:18:54.000Z" itemprop="datePublished">2020-05-23</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 公有Pod库
-</a>
+        <p>私有Pod库的创建和使用方法基本和 <a href="/2020/05/23/公有Pod库">公有Pod库</a> 一样, 唯一不一样的地方是他们的Spec Repo不一样, 公有Pod库的 podspec 由 CocoaPods/Specs 管理, 而私有Pod库则需要自己建立一个仓库来管理 podspec. 流程可看 <a href="https://guides.cocoapods.org/making/private-cocoapods.html" target="_blank" rel="noopener">官网</a></p>
+<hr>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
+<li><a href="#jump1">创建一个存放Spec Repo的Repositories</a></li>
+<li><a href="#jump2">创建私有Spec Repo</a></li>
+<li><a href="#jump3">发布Pod库</a></li>
+<li><a href="#jump4">Podfile中使用</a></li>
+</ol>
+<hr>
+<h3 id="1-创建一个存放Spec-Repo的Repositories"><a href="#1-创建一个存放Spec-Repo的Repositories" class="headerlink" title="1. 创建一个存放Spec Repo的Repositories"></a><span id="jump1">1. 创建一个存放Spec Repo的Repositories</span></h3><p>在Github或者自己的git服务器中新建一个Repositories, 用来存放和管理Spec Repo</p>
+<hr>
+<h3 id="2-创建私有Spec-Repo"><a href="#2-创建私有Spec-Repo" class="headerlink" title="2. 创建私有Spec Repo"></a><span id="jump2">2. 创建私有Spec Repo</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo add [Private Repo Name] [GitHub HTTPS clone URL]</span><br></pre></td></tr></table></figure>
 
+<hr>
+<h3 id="3-发布Pod库"><a href="#3-发布Pod库" class="headerlink" title="3. 发布Pod库"></a><span id="jump3">3. 发布Pod库</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo push [Private Repo Name] lib.podspec</span><br></pre></td></tr></table></figure>
 
-              
-                
-<a href="/2020/05/24/私有Pod库/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-05-24T01:05:45.000Z" itemprop="datePublished">2020-05-24</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 私有Pod库
-</a>
+<hr>
+<h3 id="4-Podfile中使用"><a href="#4-Podfile中使用" class="headerlink" title="4. Podfile中使用"></a><span id="jump4">4. Podfile中使用</span></h3><p>在Podfile文件上方，添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source &apos;[GitHub HTTPS clone URL]&apos;</span><br></pre></td></tr></table></figure>
 
+<p>就可以使用自己的私有Pod库了</p>
 
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse网络基础" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              网络基础
-            </a>
-            <small class="text-muted">(Total 2 articles)</small>
-          </h3>
-        </div>
-        <div id="collapse网络基础" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading网络基础">
-          <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/2020/05/10/加密、数字签名与证书/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-05-10T14:48:26.000Z" itemprop="datePublished">2020-05-10</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 加密、数字签名与证书
-</a>
-
-
-              
-                
-<a href="/2020/05/10/网络相关概念/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-05-10T13:41:39.000Z" itemprop="datePublished">2020-05-10</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 网络相关概念
-</a>
-
-
-              
-            </div>
-          </div>
-        </div>
-      </div>
       
     </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://zhangxiaopei.github.io/2020/05/24/私有Pod库/" title="私有Pod库" target="_blank" rel="external">https://zhangxiaopei.github.io/2020/05/24/私有Pod库/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/zhangxiaopei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/zhangxiaopei" target="_blank"><span class="text-dark">张小培</span><small class="ml-1x">iOS Developer</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2020/05/23/markdown语法/" title="markdown语法"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
+
   <!-- <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 	
     <div class="copyright">
@@ -461,6 +445,12 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+   
+
+
+
+
+   
 
 
 

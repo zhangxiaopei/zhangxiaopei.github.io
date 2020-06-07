@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangxiaopei.github.io/"/>
-  <updated>2020-06-07T03:53:52.029Z</updated>
+  <updated>2020-06-07T10:17:52.325Z</updated>
   <id>https://zhangxiaopei.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>低版本Xcode真机调试高版本iOS设备</title>
+    <link href="https://zhangxiaopei.github.io/2020/06/07/%E4%BD%8E%E7%89%88%E6%9C%ACXcode%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95%E9%AB%98%E7%89%88%E6%9C%ACiOS%E8%AE%BE%E5%A4%87/"/>
+    <id>https://zhangxiaopei.github.io/2020/06/07/%E4%BD%8E%E7%89%88%E6%9C%ACXcode%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95%E9%AB%98%E7%89%88%E6%9C%ACiOS%E8%AE%BE%E5%A4%87/</id>
+    <published>2020-06-07T03:58:49.000Z</published>
+    <updated>2020-06-07T10:17:52.325Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>下载设备iOS系统对应的 <a href="https://github.com/iGhibli/iOS-DeviceSupport/tree/master/DeviceSupport" target="_blank" rel="noopener">DeviceSupport</a></p></li><li><p>将DeviceSupport文件拖进以下路径</p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport</span><br></pre></td></tr></table></figure><ol start="3"><li>重启 Xcode 即可。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载设备iOS系统对应的 &lt;a href=&quot;https://github.com/iGhibli/iOS-DeviceSupport/tree/master/DeviceSupport&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dev
+      
+    
+    </summary>
+    
+    
+      <category term="开发调试" scheme="https://zhangxiaopei.github.io/categories/%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>git配置</title>

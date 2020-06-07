@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangxiaopei.github.io/"/>
-  <updated>2020-05-24T15:35:04.098Z</updated>
+  <updated>2020-06-07T03:53:52.029Z</updated>
   <id>https://zhangxiaopei.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git配置</title>
+    <link href="https://zhangxiaopei.github.io/2020/06/07/git%E9%85%8D%E7%BD%AE/"/>
+    <id>https://zhangxiaopei.github.io/2020/06/07/git%E9%85%8D%E7%BD%AE/</id>
+    <published>2020-06-07T03:37:01.000Z</published>
+    <updated>2020-06-07T03:53:52.029Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol><li><a href="#jump1">代理设置</a></li></ol><hr><h3 id="代理设置"><a href="#代理设置" class="headerlink" title="代理设置"></a><span id="jump1">代理设置</span></h3><ol><li>设置全局代理</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 设置 http 和 https 的全局代理</span><br><span class="line">git config --global http.proxy socks5://127.0.0.1:1086</span><br><span class="line">git config --global https.proxy socks5://127.0.0.1:1086</span><br><span class="line"></span><br><span class="line">// 删除 http 和 https 的全局代理</span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure><ol start="2"><li>设置指定域名代理</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 设置 github 的 http 和 https 代理</span><br><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:1086</span><br><span class="line">git config --global https.https://github.com.proxy socks5://127.0.0.1:1086</span><br><span class="line"></span><br><span class="line">// 删除 github 的 http 和 https 代理</span><br><span class="line">git config --global --unset http.https://github.com.proxy</span><br><span class="line">git config --global --unset https.https://github.com.proxy</span><br></pre></td></tr></table></figure><ol start="3"><li>可在 ~/.gitconfig 文件中查看已配置的代理</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[http]</span><br><span class="line">proxy = socks5://127.0.0.1:1086</span><br><span class="line">[https]</span><br><span class="line">proxy = socks5://127.0.0.1:1086</span><br><span class="line"></span><br><span class="line">[http &quot;https://github.com&quot;]</span><br><span class="line">proxy = socks5://127.0.0.1:1086</span><br><span class="line">[https &quot;https://github.com&quot;]</span><br><span class="line">proxy = socks5://127.0.0.1:1086</span><br></pre></td></tr></table></figure><blockquote><p>参考 <a href="https://gist.github.com/evantoli/f8c23a37eb3558ab8765" target="_blank" rel="noopener">Configure Git to use a proxy</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h1 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#jump1&quot;&gt;代理设置&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;代理设置&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://zhangxiaopei.github.io/categories/Git/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Flutter入门01_第一个Flutter项目</title>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhangxiaopei.github.io/about/index.html</loc>
+    
+    <lastmod>2020-06-07T02:53:47.542Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhangxiaopei.github.io/2020/05/24/Flutter%E5%85%A5%E9%97%A801_%E7%AC%AC%E4%B8%80%E4%B8%AAFlutter%E9%A1%B9%E7%9B%AE/</loc>
     
     <lastmod>2020-05-24T15:35:04.098Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://zhangxiaopei.github.io/2019/08/05/%E7%94%A8Github-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2020-05-24T03:44:25.566Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhangxiaopei.github.io/about/index.html</loc>
-    
-    <lastmod>2020-05-24T01:49:09.296Z</lastmod>
     
   </url>
   
